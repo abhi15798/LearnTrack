@@ -1,7 +1,6 @@
 package com.airtribe.learntrack.service;
 
 import com.airtribe.learntrack.entity.Course;
-import com.airtribe.learntrack.entity.Student;
 import com.airtribe.learntrack.exception.EntityNotFoundException;
 
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ public class CourseService {
     }
 
     public List<Course> getAllCourses(){
-        return courses;
+        return new ArrayList<>(courses);
     }
     public Course getCourseById(int courseId)  {
         for(Course c: courses){

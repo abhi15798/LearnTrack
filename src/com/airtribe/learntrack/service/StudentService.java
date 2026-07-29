@@ -22,7 +22,7 @@ public class StudentService{
     }
 
     public List<Student> getAllStudents(){
-        return students;
+        return new ArrayList<>(students);
     }
     public Student getStudentById(int id)  {
         for(Student s: students){

@@ -8,7 +8,6 @@ public class Student extends Person {
 
     public Student(String firstName, String lastName, String email, String batch) {
         super(IdGenerator.getNextStudentId(),firstName,lastName,email);
-        this.id = IdGenerator.getNextStudentId();
         this.batch = batch;
         this.active = true;
     }
@@ -16,7 +15,6 @@ public class Student extends Person {
     // Overloaded constructor 1: without batch (batch assigned later)
     public Student(String firstName, String lastName, String email) {
         super(IdGenerator.getNextStudentId(),firstName,lastName,email);
-        this.id = IdGenerator.getNextStudentId();
         this.batch = "UNASSIGNED";
         this.active = true;
     }

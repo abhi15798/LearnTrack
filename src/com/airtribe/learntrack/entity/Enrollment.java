@@ -47,6 +47,9 @@ public class Enrollment {
     }
 
     public void setStatus(Status status) {
+        if (status == null) {
+            throw new IllegalArgumentException("Status cannot be null");
+        }
         this.status = status;
     }
 }

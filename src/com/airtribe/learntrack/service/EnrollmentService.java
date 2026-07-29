@@ -29,7 +29,7 @@ public class EnrollmentService {
         return enrollment.getId();
     }
     public List<Enrollment> getAllEnrollments(){
-        return enrollments;
+        return new ArrayList<>(enrollments);
     }
     public List<Enrollment> getAllEnrollmentsOfStudent(int studentId){
         List<Enrollment> studentEnrollments = new ArrayList<>();

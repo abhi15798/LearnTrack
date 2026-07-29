@@ -115,7 +115,12 @@ public class Main {
                             System.out.println("Enter Course Description");
                             String description = sc.nextLine();
                             int duration = readIntInput(sc, "Enter Course Duration (in Weeks)");
-                            int courseId = courseService.addCourse(courseName, description, duration);
+                            int courseId= 0;
+                            try{
+                                courseId = courseService.addCourse(courseName, description, duration);
+                            }catch(IllegalArgumentException e){
+                                System.out.println("Error: "+ e.getMessage());
+                            }
                             System.out.println("Course Added Successfully : Course ID = " + courseId);
                         } else if (choice == 2) {
                             if (courseService.getAllCourses().isEmpty()) {

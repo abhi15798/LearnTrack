@@ -13,6 +13,9 @@ public class Course {
         this.id = IdGenerator.getNextCourseId();
         this.courseName = courseName;
         this.description = description;
+        if (durationInWeeks <= 0) {
+            throw new IllegalArgumentException("Duration in weeks must be positive");
+        }
         this.durationInWeeks = durationInWeeks;
         this.active = true; //default as newly created course is going to be active
     }
@@ -42,6 +45,9 @@ public class Course {
     }
 
     public void setDurationInWeeks(int durationInWeeks) {
+        if (durationInWeeks <= 0) {
+            throw new IllegalArgumentException("Duration in weeks must be positive");
+        }
         this.durationInWeeks = durationInWeeks;
     }
 
